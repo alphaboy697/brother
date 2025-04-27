@@ -1,33 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Loading Page</title>
+    <title>صفحة التحميل</title>
     <style>
-        /* إضافة بعض الأنماط البسيطة لتصميم صفحة تحميل */
+        /* تصميم صفحة التحميل */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
+
+        .loader {
+            margin-bottom: 30px;
+        }
+        .loader img {
+            width: 100px; /* حجم الصورة المتحركة */
+            height: 100px;
+        }
+
         .loading {
-            font-size: 30px;
+            font-size: 25px;
             color: #333;
             animation: blink 1.5s infinite;
         }
+
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        /* تصميم الروابط */
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .links a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* تصميم الزر */
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
-    <div class="loading">Loading...</div>
+
+    <!-- صورة التحميل المتحركة -->
+    <div class="loader">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Loading_icon.gif" alt="Loading...">
+    </div>
+
+    <!-- النص "جاري التحميل" -->
+    <div class="loading">جاري التحميل...</div>
+
+    <!-- الروابط -->
+    <div class="links">
+        <a href="https://www.facebook.com" target="_blank">زيارة فيسبوك</a>
+        <a href="https://www.instagram.com" target="_blank">زيارة إنستاجرام</a>
+        <a href="https://www.twitter.com" target="_blank">زيارة تويتر</a>
+    </div>
+
+    <!-- زر للتحويل إلى صفحة أخرى -->
+    <button onclick="window.location.href='https://www.example.com'">الذهاب إلى صفحة أخرى</button>
+
 </body>
 </html>
+
+
